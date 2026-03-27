@@ -75,6 +75,18 @@ public final class App {
                         System.out.println("✘ ID no válido.");
                     }
                     break;
+                
+                case 5:
+                    gestor.listarPendientes();
+                    break;
+
+                case 6:
+                    gestor.listarCompletadas();
+                    break;
+
+                case 7:
+                    gestor.guardarEnFichero("tareas.txt");
+                    break;
 
                 case 0:
                     System.out.println("¡Hasta luego!");
