@@ -95,12 +95,12 @@ public final class App {
      */
     private static void mostrarMenu() {
         System.out.println("\n--- MENÚ ---");
-        System.out.println("1. Nueva tarea");
-        System.out.println("2. Listar tareas");
-        System.out.println("3. Completar tarea");
-        System.out.println("4. Eliminar tarea");
-        System.out.println("5. Ver pendientes");
-        System.out.println("6. Ver completadas");
-        System.out.println("0. Salir");
+        System.out.println(" ✏️ 1. Nueva tarea");
+        System.out.println(" 📝 2. Listar tareas");
+        System.out.println(" ✅ 3. Completar tarea");
+        System.out.println(" 🆑 4. Eliminar tarea");
+        System.out.println(" 👀🕰️ 5. Ver pendientes");
+        System.out.println(" 👀✅ 6. Ver completadas");
+        System.out.println(" 💨 0. Salir");
     }
 }
