@@ -1,5 +1,8 @@
 package com.ieselpla.primer_dam;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -78,6 +81,22 @@ public class GestorTareas {
      */
     public int contarTareas() {
         return tareas.size();
+    }
+
+    /**
+     * Guarda todas las tareas en un fichero.
+     * Cada tarea se escribe en una línea usando su representación toString().
+     */
+    public void guardarEnFichero(String ruta) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(ruta))) {
+            for (Tarea tarea : tareas) {
+                writer.write(tarea.toString());
+                writer.newLine();
+            }
+            System.out.println("✔ Tareas guardadas en " + ruta);
+        } catch (IOException e) {
+            System.out.println("✘ Error al guardar en fichero: " + e.getMessage());
+        }
     }
 
     // -------------------------------------------------------
