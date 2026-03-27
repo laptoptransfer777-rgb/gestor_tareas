@@ -94,7 +94,7 @@ public final class App {
      * miembros de la pareja en el Bloque 3 del taller.
      */
     private static void mostrarMenu() {
-        System.out.println("\n--- MENÚ ---");
+        System.out.println("\n=== OPCIONES DISPONIBLES ===\n");
         System.out.println("1. Nueva tarea");
         System.out.println("2. Listar tareas");
         System.out.println("3. Completar tarea");
