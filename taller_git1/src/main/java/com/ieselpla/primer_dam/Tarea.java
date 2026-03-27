@@ -5,17 +5,23 @@ package com.ieselpla.primer_dam;
  * TODO: Añadir campo 'prioridad' (rama feature/prioridad)
  */
 public class Tarea {
-
+    public enum Prioridad {
+        ALTA,
+        MEDIA,
+        BAJA
+    }
     private int id;
     private String titulo;
     private String descripcion;
     private boolean completada;
+    private Prioridad prioridad;
 
-    public Tarea(int id, String titulo, String descripcion) {
+    public Tarea(int id, String titulo, String descripcion, Prioridad prioridad) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.completada = false;
+        this.prioridad = prioridad;
     }
 
     public int getId() {
@@ -49,6 +55,6 @@ public class Tarea {
     @Override
     public String toString() {
         String estado = completada ? "[✓]" : "[ ]";
-        return estado + " [" + id + "] " + titulo + " - " + descripcion;
+        return estado + " [" + id + "] " + titulo + " - " + descripcion + " [Prioridad: " + prioridad + "]";
     }
 }
