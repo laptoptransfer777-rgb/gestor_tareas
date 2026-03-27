@@ -50,8 +50,12 @@ public class GestorTareas {
     public void completarTarea(int id) {
         Tarea encontrada = buscarPorId(id);
         // ¿Ves el problema? Falta validar que 'encontrada' no sea null
-        encontrada.setCompletada(true);
-        System.out.println("✔ Tarea " + id + " marcada como completada.");
+        if (encontrada == null) {
+            encontrada.setCompletada(true);
+            System.out.println("✔ Tarea " + id + " marcada como completada.");
+        } else {
+            System.out.println("ERROR: El id no existe");
+        }
     }
 
     /**
