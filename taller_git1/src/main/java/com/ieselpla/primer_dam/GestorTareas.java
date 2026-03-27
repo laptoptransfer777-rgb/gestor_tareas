@@ -20,8 +20,8 @@ public class GestorTareas {
     /**
      * Añade una nueva tarea al gestor.
      */
-    public void añadirTarea(String titulo, String descripcion) {
-        Tarea nueva = new Tarea(proximoId, titulo, descripcion);
+    public void añadirTarea(String titulo, String descripcion, Tarea.Prioridad prioridad) {
+        Tarea nueva = new Tarea(proximoId, titulo, descripcion, prioridad);
         tareas.add(nueva);
         proximoId++;
         System.out.println("✔ Tarea añadida con ID " + nueva.getId());

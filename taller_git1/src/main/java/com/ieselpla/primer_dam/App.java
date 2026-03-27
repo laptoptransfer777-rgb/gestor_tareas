@@ -2,6 +2,8 @@ package com.ieselpla.primer_dam;
 
 import java.util.Scanner;
 
+import com.ieselpla.primer_dam.Tarea.Prioridad;
+
 /**
  * Punto de entrada de la aplicación Gestor de Tareas.
  * Menú interactivo por consola.
@@ -40,7 +42,14 @@ public final class App {
                     String titulo = scanner.nextLine();
                     System.out.print("Descripción: ");
                     String descripcion = scanner.nextLine();
-                    gestor.añadirTarea(titulo, descripcion);
+                    System.out.print ("Prioridad( ALTA, MEDIA, BAJA ): ");
+                    String prioridadInput = scanner.nextLine().trim().toUpperCase();
+                    try {
+                        Prioridad prioridad = Prioridad.valueOf(prioridadInput);
+                        gestor.añadirTarea(titulo, descripcion, prioridad);
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("Prioridad no válida. Usa ALTA, MEDIA o BAJA.");
+                    }
                     break;
 
                 case 2:
